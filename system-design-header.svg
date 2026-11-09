@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">System Design Notes</title>
+  <desc id="desc">Animated system design banner with connected nodes and flowing data packets.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071426"/>
+      <stop offset="100%" stop-color="#102c45"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="300" rx="22" fill="url(#bg)"/>
+  <g opacity=".12" stroke="#8bdcf0" stroke-width="1">
+    <path d="M0 50H1200M0 100H1200M0 150H1200M0 200H1200M0 250H1200"/>
+    <path d="M100 0V300M200 0V300M300 0V300M400 0V300M500 0V300M600 0V300M700 0V300M800 0V300M900 0V300M1000 0V300M1100 0V300"/>
+  </g>
+  <g fill="none" stroke="#38bdf8" stroke-width="2" opacity=".55">
+    <path d="M700 78L825 130L950 78L1080 130L950 205L825 250L700 205L825 130L950 205"/>
+    <path d="M825 130L825 250M950 78L950 205M1080 130L1080 230"/>
+  </g>
+  <g fill="#0b1f33" stroke="url(#accent)" stroke-width="3" filter="url(#glow)">
+    <rect x="675" y="55" width="50" height="46" rx="10"/>
+    <rect x="800" y="107" width="50" height="46" rx="10"/>
+    <rect x="925" y="55" width="50" height="46" rx="10"/>
+    <rect x="1055" y="107" width="50" height="46" rx="10"/>
+    <rect x="925" y="182" width="50" height="46" rx="10"/>
+    <rect x="800" y="227" width="50" height="46" rx="10"/>
+    <rect x="675" y="182" width="50" height="46" rx="10"/>
+  </g>
+  <g fill="#a5f3fc">
+    <circle r="5"><animateMotion dur="3.5s" repeatCount="indefinite" path="M700 78L825 130L950 78L1080 130"/></circle>
+    <circle r="4"><animateMotion dur="4.2s" repeatCount="indefinite" path="M1080 130L950 205L825 250L700 205"/></circle>
+    <circle r="4"><animateMotion dur="3s" repeatCount="indefinite" path="M825 130L825 250"/></circle>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="72" y="112" fill="#e0f2fe" font-size="19" letter-spacing="5">LEARN • DESIGN • SCALE</text>
+    <text x="68" y="174" fill="#ffffff" font-size="49" font-weight="700">SYSTEM DESIGN</text>
+    <text x="72" y="218" fill="url(#accent)" font-size="27" font-weight="600">NOTES &amp; CONCEPTS</text>
+    <rect x="72" y="240" width="250" height="3" rx="2" fill="url(#accent)">
+      <animate attributeName="width" values="70;250;70" dur="4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

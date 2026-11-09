@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="390" viewBox="0 0 920 390" role="img" aria-labelledby="title desc">
+<title id="title">Animated horizontal scaling diagram</title>
+<desc id="desc">One server becomes multiple server instances, with requests distributed among them by a load balancer.</desc>
+<defs>
+  <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101827"/><stop offset="1" stop-color="#172b45"/></linearGradient>
+  <linearGradient id="node" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e7490"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif;fill:#e5eefb}.small{font-size:15px;fill:#b8c7dc}.label{font-size:17px;font-weight:700}
+    .box{fill:url(#node);stroke:#67e8f9;stroke-width:2}
+    .request{fill:#fbbf24;animation:flow 2.8s linear infinite}
+    .request.r2{animation-delay:.65s}.request.r3{animation-delay:1.3s}
+    .node{animation:pop 3s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}
+    .node.n2{animation-delay:.5s}.node.n3{animation-delay:1s}
+    @keyframes flow{0%{transform:translate(0,0);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translate(440px,0);opacity:0}}
+    @keyframes pop{from{filter:brightness(.8)}to{filter:brightness(1.35)}}
+    @media(prefers-reduced-motion:reduce){.request,.node{animation:none}}
+  </style>
+</defs>
+<rect width="920" height="390" rx="22" fill="url(#bg2)"/>
+<text x="42" y="48" font-size="25" font-weight="700">HORIZONTAL SCALING — SCALE OUT</text>
+<text x="42" y="76" class="small">Add more machines and distribute work across multiple instances.</text>
+<g transform="translate(45 150)">
+  <text x="60" y="-20" text-anchor="middle" class="label">CLIENTS</text>
+  <circle cx="30" cy="22" r="12" fill="#93c5fd"/><circle cx="65" cy="22" r="12" fill="#93c5fd"/>
+  <circle cx="47" cy="57" r="12" fill="#93c5fd"/>
+  <path d="M30 38v18 M65 38v18 M47 73v12" stroke="#93c5fd" stroke-width="3"/>
+</g>
+<path d="M140 207 H245" stroke="#67e8f9" stroke-width="3" stroke-dasharray="7 7"/>
+<g transform="translate(245 160)">
+  <rect width="150" height="90" rx="12" fill="#1e293b" stroke="#67e8f9" stroke-width="2"/>
+  <text x="75" y="36" text-anchor="middle" class="label">LOAD</text><text x="75" y="59" text-anchor="middle" class="label">BALANCER</text>
+  <circle cx="18" cy="76" r="4" fill="#a7f3d0" class="node"/>
+</g>
+<path d="M395 205 H470 M470 205 V122 H535 M470 205 H535 M470 205 V288 H535" fill="none" stroke="#67e8f9" stroke-width="3" stroke-dasharray="7 7"/>
+<g class="node" transform="translate(535 90)">
+  <rect width="150" height="65" rx="10" class="box"/><text x="75" y="28" text-anchor="middle" class="label">SERVER A</text><text x="75" y="49" text-anchor="middle" font-size="13">Instance 1</text>
+</g>
+<g class="node n2" transform="translate(535 173)">
+  <rect width="150" height="65" rx="10" class="box"/><text x="75" y="28" text-anchor="middle" class="label">SERVER B</text><text x="75" y="49" text-anchor="middle" font-size="13">Instance 2</text>
+</g>
+<g class="node n3" transform="translate(535 256)">
+  <rect width="150" height="65" rx="10" class="box"/><text x="75" y="28" text-anchor="middle" class="label">SERVER C</text><text x="75" y="49" text-anchor="middle" font-size="13">Instance 3</text>
+</g>
+<path d="M685 122 H755 V205 M685 205 H755 M685 288 H755 V205 H790" fill="none" stroke="#64748b" stroke-width="2"/>
+<g transform="translate(790 170)">
+  <rect width="100" height="70" rx="10" fill="#334155" stroke="#a7f3d0" stroke-width="2"/>
+  <text x="50" y="29" text-anchor="middle" class="label">SHARED</text><text x="50" y="50" text-anchor="middle" class="label">DATA</text>
+</g>
+<circle class="request" cx="395" cy="205" r="6"/><circle class="request r2" cx="395" cy="205" r="6"/><circle class="request r3" cx="395" cy="205" r="6"/>
+<text x="460" y="356" text-anchor="middle" font-size="15" fill="#93c5fd">More instances • Parallel request handling • Requires coordination and shared-state design</text>
+</svg>

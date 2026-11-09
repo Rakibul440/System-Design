@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="390" viewBox="0 0 920 390" role="img" aria-labelledby="title desc">
+<title id="title">Animated vertical scaling diagram</title>
+<desc id="desc">One server grows from a small machine into a larger machine with more CPU and RAM.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101827"/><stop offset="1" stop-color="#172b45"/></linearGradient>
+  <linearGradient id="server" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#0e7490"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif;fill:#e5eefb}
+    .small{font-size:15px;fill:#b8c7dc}.label{font-size:18px;font-weight:700}
+    .server{fill:url(#server);stroke:#67e8f9;stroke-width:2}
+    .led{fill:#a7f3d0}
+    .pulse{animation:pulse 2.4s ease-in-out infinite}
+    .grow{transform-box:fill-box;transform-origin:center;animation:grow 4s ease-in-out infinite}
+    .bar{animation:bar 2s ease-in-out infinite alternate}
+    @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+    @keyframes grow{0%,18%{transform:scale(.78)}55%,100%{transform:scale(1.12)}}
+    @keyframes bar{from{transform:scaleY(.55)}to{transform:scaleY(1)}}
+    @media(prefers-reduced-motion:reduce){.pulse,.grow,.bar{animation:none}}
+  </style>
+</defs>
+<rect width="920" height="390" rx="22" fill="url(#bg)"/>
+<text x="42" y="48" font-size="25" font-weight="700">VERTICAL SCALING — SCALE UP</text>
+<text x="42" y="76" class="small">Increase the capacity of one machine; the number of servers stays the same.</text>
+<g transform="translate(95 118)">
+  <text x="112" y="0" text-anchor="middle" class="label">BEFORE</text>
+  <rect x="35" y="24" width="154" height="176" rx="13" fill="#0b1220" stroke="#64748b" stroke-width="2"/>
+  <rect x="51" y="43" width="122" height="90" rx="7" class="server"/>
+  <circle cx="65" cy="151" r="5" class="led pulse"/><circle cx="82" cy="151" r="5" fill="#fbbf24"/>
+  <rect x="51" y="166" width="122" height="19" rx="5" fill="#334155"/>
+  <text x="112" y="93" text-anchor="middle" font-size="17" font-weight="700">SERVER A</text>
+  <text x="112" y="114" text-anchor="middle" font-size="13">2 vCPU · 4 GB RAM</text>
+  <text x="112" y="229" text-anchor="middle" class="small">One small instance</text>
+</g>
+<g transform="translate(350 190)">
+  <path d="M0 0 H165" stroke="#67e8f9" stroke-width="4" stroke-linecap="round"/>
+  <path d="M150 -13 L168 0 L150 13" fill="none" stroke="#67e8f9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="83" y="-22" text-anchor="middle" class="small">UPGRADE CPU / RAM</text>
+  <g class="bar" transform="translate(65 25)"><rect x="0" y="0" width="12" height="35" rx="4" fill="#22d3ee"/></g>
+  <g class="bar" transform="translate(88 14)"><rect x="0" y="0" width="12" height="46" rx="4" fill="#22d3ee"/></g>
+  <g class="bar" transform="translate(111 3)"><rect x="0" y="0" width="12" height="57" rx="4" fill="#22d3ee"/></g>
+</g>
+<g transform="translate(625 100)">
+  <text x="110" y="18" text-anchor="middle" class="label">AFTER</text>
+  <g class="grow">
+    <rect x="22" y="38" width="176" height="208" rx="15" fill="#0b1220" stroke="#67e8f9" stroke-width="2"/>
+    <rect x="40" y="58" width="140" height="115" rx="8" class="server" filter="url(#glow)"/>
+    <circle cx="56" cy="194" r="6" class="led pulse"/><circle cx="76" cy="194" r="6" fill="#fbbf24"/>
+    <rect x="40" y="211" width="140" height="22" rx="5" fill="#334155"/>
+    <text x="110" y="112" text-anchor="middle" font-size="18" font-weight="700">SERVER A</text>
+    <text x="110" y="137" text-anchor="middle" font-size="14">16 vCPU · 64 GB RAM</text>
+  </g>
+  <text x="110" y="279" text-anchor="middle" class="small">Still one instance</text>
+</g>
+<text x="460" y="356" text-anchor="middle" font-size="15" fill="#93c5fd">More power per machine • Simple architecture • Has an upper hardware limit</text>
+</svg>

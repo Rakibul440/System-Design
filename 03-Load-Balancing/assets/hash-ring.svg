@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" role="img" aria-labelledby="t d">
+<title id="t">Consistent hashing ring</title><desc id="d">Three servers occupy positions on a circular hash ring. Keys are assigned clockwise to the next server.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#eaf2ff}.ring{fill:none;stroke:#719fc8;stroke-width:5}.node{fill:#1c3b59;stroke:#8bc9ff;stroke-width:3}.key{fill:#ffd166;stroke:#fff0bd;stroke-width:1.5}.orbit{stroke:#8bc9ff;stroke-width:2;stroke-dasharray:6 7;fill:none}</style>
+<rect width="720" height="460" rx="18" fill="#0b1422"/><circle class="ring" cx="350" cy="225" r="155"/>
+<path class="orbit" d="M350 70 A155 155 0 0 1 505 225"/>
+<circle class="node" cx="350" cy="70" r="25"/><text x="350" y="76" text-anchor="middle" font-size="15">A</text>
+<circle class="node" cx="505" cy="225" r="25"/><text x="505" y="231" text-anchor="middle" font-size="15">B</text>
+<circle class="node" cx="350" cy="380" r="25"/><text x="350" y="386" text-anchor="middle" font-size="15">C</text>
+<circle class="key" cx="220" cy="135" r="9"/><text x="155" y="120" font-size="15">Key X</text><path d="M229 135 Q270 95 325 76" stroke="#ffd166" stroke-width="2" fill="none"/>
+<circle class="key" cx="450" cy="320" r="9"/><text x="475" y="335" font-size="15">Key Y</text><path d="M450 310 Q490 270 505 250" stroke="#ffd166" stroke-width="2" fill="none"/>
+<text x="350" y="225" text-anchor="middle" font-size="18">Hash</text><text x="350" y="248" text-anchor="middle" font-size="18">ring</text>
+<text x="350" y="430" text-anchor="middle" font-size="14" fill="#a8bdd4">Move clockwise from each key to find its owner.</text>
+</svg>

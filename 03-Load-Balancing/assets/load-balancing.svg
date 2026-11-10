@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" role="img" aria-labelledby="t d">
+<title id="t">Load balancing overview</title><desc id="d">Clients send requests to a load balancer which distributes traffic across three backend servers.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#e8eef8}.box{fill:#18283d;stroke:#6da9e8;stroke-width:2}.line{stroke:#8cc7ff;stroke-width:3;fill:none;stroke-linecap:round}.packet{fill:#ffd166;animation:travel 3s linear infinite}.p2{animation-delay:1s}.p3{animation-delay:2s}@keyframes travel{0%{transform:translate(0,0);opacity:0}10%{opacity:1}85%{opacity:1}100%{transform:translate(0,95px);opacity:0}}</style>
+<rect width="900" height="230" rx="18" fill="#0b1422"/>
+<rect class="box" x="35" y="78" width="150" height="72" rx="12"/><text x="110" y="108" text-anchor="middle" font-size="18">Clients</text><text x="110" y="130" text-anchor="middle" font-size="12">HTTP requests</text>
+<path class="line" d="M185 114 H345"/><path class="line" d="M510 114 H590 V45 H690 M590 114 V114 H690 M590 114 V185 H690"/>
+<rect class="box" x="345" y="78" width="165" height="72" rx="12"/><text x="427" y="108" text-anchor="middle" font-size="18">Load Balancer</text><text x="427" y="130" text-anchor="middle" font-size="12">Select healthy backend</text>
+<rect class="box" x="690" y="15" width="165" height="58" rx="10"/><text x="772" y="50" text-anchor="middle" font-size="17">Server 1</text>
+<rect class="box" x="690" y="85" width="165" height="58" rx="10"/><text x="772" y="120" text-anchor="middle" font-size="17">Server 2</text>
+<rect class="box" x="690" y="155" width="165" height="58" rx="10"/><text x="772" y="190" text-anchor="middle" font-size="17">Server 3</text>
+<circle class="packet" cx="185" cy="114" r="6"/><circle class="packet p2" cx="185" cy="114" r="6"/><circle class="packet p3" cx="185" cy="114" r="6"/>
+</svg>

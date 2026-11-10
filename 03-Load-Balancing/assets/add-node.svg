@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" role="img" aria-labelledby="t d">
+<title id="t">Adding a node with consistent hashing</title><desc id="d">A new node D is inserted between A and B. Only keys in that interval move from B to D.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#eaf2ff}.ring{fill:none;stroke:#54799d;stroke-width:14}.old{fill:#2b5278;stroke:#9bd1ff;stroke-width:3}.new{fill:#1b5948;stroke:#70e0b6;stroke-width:3}.key{fill:#ffd166}</style>
+<rect width="900" height="330" rx="18" fill="#0b1422"/>
+<text x="220" y="35" text-anchor="middle" font-size="21">Before</text><text x="680" y="35" text-anchor="middle" font-size="21">After adding D</text>
+<circle class="ring" cx="220" cy="170" r="105"/><circle class="old" cx="220" cy="65" r="19"/><circle class="old" cx="325" cy="170" r="19"/><circle class="old" cx="220" cy="275" r="19"/>
+<text x="220" y="71" text-anchor="middle" font-size="14">A</text><text x="325" y="176" text-anchor="middle" font-size="14">B</text><text x="220" y="281" text-anchor="middle" font-size="14">C</text>
+<circle class="ring" cx="680" cy="170" r="105"/><circle class="old" cx="680" cy="65" r="19"/><circle class="new" cx="785" cy="170" r="19"/><circle class="old" cx="680" cy="275" r="19"/>
+<text x="680" y="71" text-anchor="middle" font-size="14">A</text><text x="785" y="176" text-anchor="middle" font-size="14">D</text><text x="680" y="281" text-anchor="middle" font-size="14">C</text>
+<circle class="key" cx="275" cy="105" r="7"/><circle class="key" cx="735" cy="105" r="7"/>
+<path d="M430 170 H470 M458 158 L472 170 L458 182" stroke="#70e0b6" stroke-width="3" fill="none"/>
+<text x="450" y="225" text-anchor="middle" font-size="15" fill="#9db5d1">Only the affected interval changes owner: B → D</text>
+<text x="450" y="305" text-anchor="middle" font-size="13" fill="#9db5d1">Conceptual illustration; actual positions are determined by hashing.</text>
+</svg>

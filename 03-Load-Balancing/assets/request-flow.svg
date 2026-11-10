@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" role="img" aria-labelledby="t d">
+<title id="t">Request flow through a load balancer</title><desc id="d">Six steps from client DNS lookup to response from a selected healthy backend.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#eaf2ff}.node{fill:#172a40;stroke:#70b7f5;stroke-width:2}.arrow{stroke:#8fcaff;stroke-width:3;fill:none;stroke-dasharray:8 8;animation:dash 1.2s linear infinite}@keyframes dash{to{stroke-dashoffset:-32}}</style>
+<rect width="900" height="300" rx="18" fill="#0b1422"/>
+<g text-anchor="middle"><rect class="node" x="25" y="90" width="130" height="75" rx="12"/><text x="90" y="122" font-size="17">Client</text><text x="90" y="145" font-size="12">1. Request</text>
+<rect class="node" x="205" y="90" width="130" height="75" rx="12"/><text x="270" y="122" font-size="17">DNS</text><text x="270" y="145" font-size="12">2. Resolve</text>
+<rect class="node" x="385" y="90" width="150" height="75" rx="12"/><text x="460" y="122" font-size="17">Load Balancer</text><text x="460" y="145" font-size="12">3. Select backend</text>
+<rect class="node" x="585" y="90" width="130" height="75" rx="12"/><text x="650" y="122" font-size="17">Backend</text><text x="650" y="145" font-size="12">4. Process</text>
+<rect class="node" x="765" y="90" width="110" height="75" rx="12"/><text x="820" y="122" font-size="17">Response</text><text x="820" y="145" font-size="12">5. Return</text></g>
+<path class="arrow" d="M155 127 H205 M335 127 H385 M535 127 H585 M715 127 H765"/>
+<text x="450" y="225" text-anchor="middle" font-size="15" fill="#9db5d1">Health checks continuously update which backends are eligible.</text>
+</svg>

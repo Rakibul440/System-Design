@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" role="img" aria-labelledby="t d">
+<title id="t">Modulo hashing remapping</title><desc id="d">Adding a fourth server changes the modulo divisor and redirects many keys to different servers.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#eaf2ff}.cell{fill:#172a40;stroke:#7398bd;stroke-width:1.5}.changed{fill:#542d39;stroke:#ff8292;stroke-width:2}.same{fill:#183d37;stroke:#68d7ae;stroke-width:2}</style>
+<rect width="900" height="330" rx="18" fill="#0b1422"/>
+<text x="225" y="40" text-anchor="middle" font-size="22">Before: hash(key) % 3</text><text x="675" y="40" text-anchor="middle" font-size="22">After: hash(key) % 4</text>
+<g font-size="15" text-anchor="middle">
+<g><rect class="cell" x="40" y="75" width="370" height="48" rx="8"/><text x="225" y="105">0→S0   1→S1   2→S2</text><rect class="cell" x="40" y="135" width="370" height="48" rx="8"/><text x="225" y="165">3→S0   4→S1   5→S2</text><rect class="cell" x="40" y="195" width="370" height="48" rx="8"/><text x="225" y="225">6→S0   7→S1   8→S2</text></g>
+<g><rect class="same" x="490" y="75" width="370" height="48" rx="8"/><text x="675" y="105">0→S0   1→S1   2→S2</text><rect class="changed" x="490" y="135" width="370" height="48" rx="8"/><text x="675" y="165">3→S3   4→S0   5→S1</text><rect class="changed" x="490" y="195" width="370" height="48" rx="8"/><text x="675" y="225">6→S2   7→S3   8→S0</text></g></g>
+<path d="M430 160 H470" stroke="#ff8292" stroke-width="3"/><path d="M460 150 L472 160 L460 170" fill="none" stroke="#ff8292" stroke-width="3"/>
+<text x="450" y="290" text-anchor="middle" font-size="16" fill="#ffb6bf">Illustrative example: 6 of these 9 keys change owners.</text>
+</svg>
